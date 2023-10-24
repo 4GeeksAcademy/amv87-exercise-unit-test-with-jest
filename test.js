@@ -4,7 +4,7 @@ test('adds 14 + 9 to equal 23', () => {
     expect(total).toBe(23);
 });
 
-test("3.5 euro should be 3.75 dollars", function() {
+test("3.5 euros should be 3.75 dollars", function() {
     const { fromEuroToDollar } = require('./app.js');
     const dollars = fromEuroToDollar(3.5);
     const expected = 3.5 * 1.07; 
@@ -29,7 +29,7 @@ test("157.99 euros should be 169.05 dollars", function() {
     expect(fromEuroToDollar(157.99)).toBe(169.05);
 })
 
-test("3.5 dollar should be 511.92 yens", function() {
+test("3.5 dollars should be 511.92 yens", function() {
     const { fromDollarToYen } = require('./app.js');
     const yens = fromDollarToYen(3.5);
     const expected = (3.5 / 1.07) * 156.5; 
@@ -60,19 +60,19 @@ test("1 yen should be 0.01 pounds", function() {
     const expected = (1 / 156.5) * 0.87; 
     expect(fromYenToPound(1)).toBe(0.01);
 })
-test("160 yen should be 0.89 pounds", function() {
+test("160 yens should be 0.89 pounds", function() {
     const { fromYenToPound } = require('./app.js');
     const pounds = fromYenToPound(160);
     const expected = (160 / 156.5) * 0.87; 
     expect(fromYenToPound(160)).toBe(0.89);
 })
-test("5750.5 yen should be 31.97 pounds", function() {
+test("5750.5 yens should be 31.97 pounds", function() {
     const { fromYenToPound } = require('./app.js');
     const pounds = fromYenToPound(5750.5);
     const expected = (5750.5 / 156.5) * 0.87; 
     expect(fromYenToPound(5750.5)).toBe(31.97);
 })
-test("12468.97 yen should be 69.32 pounds", function() {
+test("12468.97 yens should be 69.32 pounds", function() {
     const { fromYenToPound } = require('./app.js');
     const pounds = fromYenToPound(12468.97);
     const expected = (12468.97 / 156.5) * 0.87; 
