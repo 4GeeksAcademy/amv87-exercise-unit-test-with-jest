@@ -1,31 +1,21 @@
-// This is my function that sums two numbers
 const sum = (a,b) => {
-    return a + b
+    return a + b;
 }
+console.log(sum(7,3));
 
-// Just a console log for ourselves
-console.log(sum(7,3))
-
-// Export the function to be used on other files 
-// (similar to the keyword "export" when using webpack)
-
-// We declare the function with the exact name "fromEuroToDollar"
 const fromEuroToDollar = function(valueInEuro) {
-    // Convert the given valueInEuro to dollars
     let valueInDollar = valueInEuro * 1.07;
-    // return the dollar value
-    return valueInDollar;
+    return Math.round((valueInDollar + Number.EPSILON) * 100) / 100;
 }
+
 const fromDollarToYen = function(valueInDollar) {
-    // Convert the given valueInEuro to dollars
     let valueInYen = (valueInDollar / 1.07) * 156.5;
-    // return the dollar value
-    return valueInYen;
+    return Math.round((valueInYen + Number.EPSILON) * 100) / 100;
 }
+
 const fromYenToPound = function(valueInYen) {
-    // Convert the given valueInEuro to dollars
     let valueInPound = (valueInYen / 156.5) * 0.87;
-    // return the dollar value
-    return valueInPound;
+    return Math.round((valueInPound + Number.EPSILON) * 100) / 100;
 }
-module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
+
+module.exports = {sum, fromEuroToDollar, fromDollarToYen, fromYenToPound};
