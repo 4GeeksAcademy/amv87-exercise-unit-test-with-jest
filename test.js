@@ -4,7 +4,7 @@ test('adds 14 + 9 to equal 23', () => {
     expect(total).toBe(23);
 });
 
-test("1 euro should be 1.07 dollars", function() {
+test("3.5 euro should be 3.75 dollars", function() {
     const { fromEuroToDollar } = require('./app.js');
     const dollars = fromEuroToDollar(3.5);
     const expected = 3.5 * 1.07; 
@@ -16,13 +16,13 @@ test("30 euros should be 32.1 dollars", function() {
     const expected = 30 * 1.07; 
     expect(fromEuroToDollar(30)).toBe(32.1);
 })
-test("55.5 euros should be 37.985 dollars", function() {
+test("55.5 euros should be 59.39 dollars", function() {
     const { fromEuroToDollar } = require('./app.js');
     const dollars = fromEuroToDollar(55.5);
     const expected = 55.5 * 1.07; 
     expect(fromEuroToDollar(55.5)).toBe(59.39);
 })
-test("157.99 euros should be 37.985 dollars", function() {
+test("157.99 euros should be 169.05 dollars", function() {
     const { fromEuroToDollar } = require('./app.js');
     const dollars = fromEuroToDollar(157.99);
     const expected = 157.99 * 1.07; 
